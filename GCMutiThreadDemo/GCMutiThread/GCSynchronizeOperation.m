@@ -10,4 +10,23 @@
 
 @implementation GCSynchronizeOperation
 
+- (GCSynchronizeOperation *)synchronizeQueue
+{
+    static GCSynchronizeOperation *shareQueues = nil;
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        shareQueues = [[GCSynchronizeOperation alloc] init];
+    });
+    
+    return shareQueues;
+}
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+
+    }
+    return self;
+}
+
 @end

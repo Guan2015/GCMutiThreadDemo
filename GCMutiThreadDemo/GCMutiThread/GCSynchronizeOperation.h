@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GCSynchronizeOperation : NSOperation
+@interface GCSynchronizeOperation : NSOperationQueue
 
 @end
