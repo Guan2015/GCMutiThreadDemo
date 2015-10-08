@@ -54,9 +54,9 @@
     });
 }
 
-
 #pragma mark -
 #pragma mark    并行同步
+
 + (void)asyncBlock:(void (^)())block
 {
     [[GCSynchronizeGCD synchronizeQueue] p_asyncBlock:block];

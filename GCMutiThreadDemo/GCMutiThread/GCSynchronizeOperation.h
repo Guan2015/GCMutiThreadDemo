@@ -10,4 +10,10 @@
 
 @interface GCSynchronizeOperation : NSOperationQueue
 
++ (GCSynchronizeOperation *)synchronizeQueue;
+
++ (void)serialSyncBlock:(void (^)())block;
+
++ (void)concurrentAsyncBlock:(void (^)())block;
+
 @end

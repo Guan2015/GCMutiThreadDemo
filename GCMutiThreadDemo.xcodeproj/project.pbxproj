@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F1A13981BC60D560025254C /* GCOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1A13971BC60D560025254C /* GCOperationManager.m */; };
 		0FFD731C1BB915B500706F3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD731B1BB915B500706F3D /* main.m */; };
 		0FFD731F1BB915B500706F3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD731E1BB915B500706F3D /* AppDelegate.m */; };
 		0FFD73221BB915B500706F3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD73211BB915B500706F3D /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F1A13961BC60D560025254C /* GCOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCOperationManager.h; sourceTree = "<group>"; };
+		0F1A13971BC60D560025254C /* GCOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCOperationManager.m; sourceTree = "<group>"; };
 		0FFD73161BB915B500706F3D /* GCMutiThreadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCMutiThreadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FFD731A1BB915B500706F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FFD731B1BB915B500706F3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				0FFD73471BB9284600706F3D /* GCSynchronizeGCD.m */,
 				0FFD73441BB9249000706F3D /* GCSynchronizeOperation.h */,
 				0FFD73451BB9249000706F3D /* GCSynchronizeOperation.m */,
+				0F1A13961BC60D560025254C /* GCOperationManager.h */,
+				0F1A13971BC60D560025254C /* GCOperationManager.m */,
 			);
 			name = GCMutiThread;
 			path = GCMutiThreadDemo/GCMutiThread;
@@ -243,6 +248,7 @@
 				0FFD731F1BB915B500706F3D /* AppDelegate.m in Sources */,
 				0FFD731C1BB915B500706F3D /* main.m in Sources */,
 				0FFD73481BB9284600706F3D /* GCSynchronizeGCD.m in Sources */,
+				0F1A13981BC60D560025254C /* GCOperationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
