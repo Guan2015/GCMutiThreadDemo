@@ -16,6 +16,7 @@
 @property (nonatomic ,strong)NSArray *testGCDs;
 @property (nonatomic ,strong)NSArray *testQueues;
 @property (nonatomic ,strong)NSArray *testOperation;
+@property (nonatomic ,strong)NSArray *testAdvancedGCD;
 
 @end
 
@@ -34,8 +35,7 @@
     _testGCDs = @[@"串行同步",@"并行同步"];
     _testQueues = @[@"串行同步", @"并行同步"];
     _testOperation = @[@"并行同步取消任务",@"暂停队列",@"依赖关系"];
-    
-    [[GCSynchronizeGCD concurrentQueue] testBarrier];
+    _testAdvancedGCD = @[@"Barrier",@"Apply",@"semaphore"];
 }
 
 #pragma mark -
@@ -220,6 +220,9 @@
         case 3:
             cell.textLabel.text = _testOperation[indexPath.row];
             break;
+        case 4:
+            cell.textLabel.text = _testAdvancedGCD[indexPath.row];
+            break;
             
         default:
             break;
@@ -229,7 +232,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -239,6 +242,7 @@
         case 1:return _testGCDs.count;
         case 2:return _testQueues.count;
         case 3:return _testOperation.count;
+        case 4:return _testAdvancedGCD.count;
             
         default: return 0;
     }
@@ -255,6 +259,8 @@
             return @"OperationQueue";
         case 3:
             return @"Operation";
+        case 4:
+            return @"Advanced GCD";
             
         default: return nil;
     }
@@ -312,6 +318,25 @@
                 case 2:
                     // 依赖关系
                     [self testDependency];
+                    break;
+                case 3:
+                    
+                    break;
+                default:
+                    break;
+            }
+            break;
+            
+        case 4:
+            switch (indexPath.row) {
+                case 0:
+                    [[GCSynchronizeGCD concurrentQueue] testBarrier];
+                    break;
+                case 1:
+                    [[GCSynchronizeGCD concurrentQueue] test_gcdApply];
+                    break;
+                case 2:
+                    [[GCSynchronizeGCD synchronizeQueue] test_gcdSemaphore];
                     break;
                 case 3:
                     

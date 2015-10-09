@@ -16,6 +16,12 @@
 
 + (GCSynchronizeGCD *)concurrentQueue;
 
++ (GCSynchronizeGCD *)synchronizeQueue;
+
 - (void)testBarrier;
+
+- (void)test_gcdApply;
+
+- (void)test_gcdSemaphore;
 
 @end
