@@ -14,4 +14,8 @@
 
 + (void)asyncBlock:(void (^)())block;
 
++ (GCSynchronizeGCD *)concurrentQueue;
+
+- (void)testBarrier;
+
 @end

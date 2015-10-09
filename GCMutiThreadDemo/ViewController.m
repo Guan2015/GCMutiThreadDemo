@@ -24,7 +24,7 @@
 - (id)init
 {
     if (self = [super init]) {
-        // story board 不会走init
+        
     }
     return self;
 }
@@ -34,7 +34,8 @@
     _testGCDs = @[@"串行同步",@"并行同步"];
     _testQueues = @[@"串行同步", @"并行同步"];
     _testOperation = @[@"并行同步取消任务",@"暂停队列",@"依赖关系"];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [[GCSynchronizeGCD concurrentQueue] testBarrier];
 }
 
 #pragma mark -
